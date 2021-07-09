@@ -1,0 +1,84 @@
+stackbitVersion: ~0.3.0
+dataDir: kidstime254
+ssgName: gatsby
+cmsName: git
+nodeVersion: 12
+models:
+  app:
+    type: data
+    label: App
+    file: app.json
+    fields:
+      - type: object
+        name: expo
+        label: Expo
+        fields:
+          - type: string
+            name: name
+            label: Name
+          - type: string
+            name: slug
+            label: Slug
+          - type: string
+            name: version
+            label: Version
+          - type: string
+            name: orientation
+            label: Orientation
+          - type: image
+            name: icon
+            label: Icon
+          - type: object
+            name: splash
+            label: Splash
+            fields:
+              - type: image
+                name: image
+                label: Image
+              - type: string
+                name: resizeMode
+                label: Resize Mode
+              - type: string
+                name: backgroundColor
+                label: Background Color
+          - type: object
+            name: updates
+            label: Updates
+            fields:
+              - type: number
+                name: fallbackToCacheTimeout
+                label: Fallback To Cache Timeout
+                subtype: int
+          - type: list
+            name: assetBundlePatterns
+            label: Asset Bundle Patterns
+            items:
+              type: string
+          - type: object
+            name: ios
+            label: Ios
+            fields:
+              - type: boolean
+                name: supportsTablet
+                label: Supports Tablet
+          - type: object
+            name: android
+            label: Android
+            fields:
+              - type: object
+                name: adaptiveIcon
+                label: Adaptive Icon
+                fields:
+                  - type: image
+                    name: foregroundImage
+                    label: Foreground Image
+                  - type: string
+                    name: backgroundColor
+                    label: Background Color
+          - type: object
+            name: web
+            label: Web
+            fields:
+              - type: image
+                name: favicon
+                label: Favicon
